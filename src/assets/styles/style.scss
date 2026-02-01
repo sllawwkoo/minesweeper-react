@@ -9,7 +9,7 @@
 // @import "_mixins.scss";
 
 /* Локальне підключення шрифтів */
-@import "_fonts.scss";
+@use "_fonts.scss";
 
 /* Скидання стилів */
 @import url("_reset.scss");
@@ -19,24 +19,24 @@
 
 /* Основні стилі */
 body {
-	background-color: var(--turquoise-20);
+  background-color: var(--turquoise-20);
 }
 
 #root {
-	height: 100%;
+  height: 100%;
 }
 
 .wrapper {
-	width: 100%;
-	min-height: 100%;
-	overflow: clip;
-	display: flex;
-	flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-	flex: 1 1 auto;
-	// min-height: 100%;
-	display: flex;
-	flex-direction: column;
+  flex: 1 1 auto;
+  // min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }

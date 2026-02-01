@@ -1,0 +1,88 @@
+$cellSize: 2rem;
+$cellBorder: #888;
+$cellBorderWidth: 1px;
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $cellSize;
+  height: $cellSize;
+  min-width: $cellSize;
+  min-height: $cellSize;
+  padding: 0;
+  border: $cellBorderWidth solid $cellBorder;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.closed {
+  background-image: url('@/assets/image/cells/closed.png');
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.flaged {
+  background-image: url('@/assets/image/cells/flaged.png');
+}
+
+.zero {
+  background-image: url('@/assets/image/cells/zero.png');
+  cursor: default;
+}
+
+.num1 {
+  background-image: url('@/assets/image/cells/num1.png');
+  cursor: default;
+}
+
+.num2 {
+  background-image: url('@/assets/image/cells/num2.png');
+  cursor: default;
+}
+
+.num3 {
+  background-image: url('@/assets/image/cells/num3.png');
+  cursor: default;
+}
+
+.num4 {
+  background-image: url('@/assets/image/cells/num4.png');
+  cursor: default;
+}
+
+.num5 {
+  background-image: url('@/assets/image/cells/num5.png');
+  cursor: default;
+}
+
+.num6 {
+  background-image: url('@/assets/image/cells/num6.png');
+  cursor: default;
+}
+
+.num7 {
+  background-image: url('@/assets/image/cells/num7.png');
+  cursor: default;
+}
+
+.num8 {
+  background-image: url('@/assets/image/cells/num8.png');
+  cursor: default;
+}
+
+.bomb {
+  background-image: url('@/assets/image/cells/bomb.png');
+  cursor: default;
+}
+
+.bombed {
+  background-image: url('@/assets/image/cells/bombed.png');
+  cursor: default;
+}
