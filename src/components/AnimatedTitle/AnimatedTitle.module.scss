@@ -1,0 +1,14 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Girassol', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+  span {
+    display: inline-block;
+  }
+}

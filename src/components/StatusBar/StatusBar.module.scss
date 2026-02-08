@@ -1,52 +1,39 @@
-$headerGap: 0.75rem;
-$headerBg: #f5f5f5;
-$headerBorder: #ccc;
-$restartBg: #4a90e2;
-$restartBgHover: #357abd;
-$restartColor: #fff;
+$barBg: #c0c0c0;
+$barBorder: #808080 #fff #fff #808080;
+$barPadding: 0.25rem 0.5rem;
+$barGap: 0.5rem;
+$cellSize: 2rem;
+$cellGap: 0.125rem;
 
-.header {
+.statusBar {
+  --cell-size: #{$cellSize};
+  --cell-gap: #{$cellGap};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: $headerGap;
-  padding: 0.75rem 1rem;
-  background-color: $headerBg;
-  border: 1px solid $headerBorder;
-  border-radius: 0.25rem;
-}
+  gap: $barGap;
+  width: calc(var(--cols, 9) * var(--cell-size) + (var(--cols, 9) - 1) * var(--cell-gap));
+  padding: $barPadding;
+  background: $barBg;
+  border: 2px solid;
+  border-color: $barBorder;
+  box-shadow: inset 1px 1px 0 #dfdfdf;
 
-.info {
-  display: flex;
-  gap: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.counter,
-.timer {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.restart {
-  padding: 0.5rem 1rem;
-  background-color: $restartBg;
-  color: $restartColor;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: $restartBgHover;
+  > *:first-child {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
   }
 
-  &:focus-visible {
-    outline: 2px solid $restartBg;
-    outline-offset: 2px;
+  > *:last-child {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  > *:nth-child(2) {
+    flex-shrink: 0;
   }
 }

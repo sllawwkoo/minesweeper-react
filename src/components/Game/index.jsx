@@ -1,6 +1,7 @@
 import { useMinesweeper } from '../../hooks/useMinesweeper';
 import Field from '../Field';
 import StatusBar from '../StatusBar';
+import AnimatedTitle from '../AnimatedTitle';
 import styles from './Game.module.scss';
 
 /**
@@ -12,6 +13,7 @@ export default function Game() {
     cols,
     time,
     flagsLeft,
+    status,
     onCellClick,
     onCellContextMenu,
     onRestart,
@@ -20,10 +22,13 @@ export default function Game() {
 
   return (
     <main className={styles.game}>
+      <AnimatedTitle status={status} />
       <StatusBar
         flagsLeft={flagsLeft}
         time={time}
+        status={status}
         onRestart={onRestart}
+        cols={cols}
       />
 
       <Field

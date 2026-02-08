@@ -1,0 +1,11 @@
+export { letterAnimation } from './animationLetter';
+export { letterExplode } from './animationLetter';
+export { firstImgAnimation } from './animationSmoke';
+export { secondImgAnimation } from './animationSmoke';
+export { gameOverAnimation } from './animationGameOver';
+export { gameMoveAnimation } from './animationGameOver';
+export { overMoveAnimation } from './animationGameOver';
+export { youWinAnimation } from './animationYouWin';
+export { youMoveAnimation } from './animationYouWin';
+export { winMoveAnimation } from './animationYouWin';
+export { buttonAnimation } from './animationButton';
