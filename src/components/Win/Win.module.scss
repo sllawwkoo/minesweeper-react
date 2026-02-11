@@ -1,0 +1,18 @@
+.container {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Alfa Slab One', sans-serif;
+  font-size: 48px;
+
+  @media (max-width: 479px) {
+    font-size: 36px;
+  }
+}

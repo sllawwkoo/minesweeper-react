@@ -2,6 +2,10 @@ import { useMinesweeper } from '../../hooks/useMinesweeper';
 import Field from '../Field';
 import StatusBar from '../StatusBar';
 import AnimatedTitle from '../AnimatedTitle';
+import GameOver from '../GameOver';
+import Smoke from '../Smoke';
+import Fireworks from '../Fireworks';
+import Win from '../Win';
 import styles from './Game.module.scss';
 
 /**
@@ -14,6 +18,7 @@ export default function Game() {
     time,
     flagsLeft,
     status,
+    gameId,
     onCellClick,
     onCellContextMenu,
     onRestart,
@@ -21,23 +26,28 @@ export default function Game() {
   } = useMinesweeper();
 
   return (
-    <main className={styles.game}>
-      <AnimatedTitle status={status} />
-      <StatusBar
-        flagsLeft={flagsLeft}
-        time={time}
-        status={status}
-        onRestart={onRestart}
-        cols={cols}
-      />
-
-      <Field
-        rows={rows}
-        cols={cols}
-        getCellView={getCellView}
-        onCellClick={onCellClick}
-        onCellContextMenu={onCellContextMenu}
-      />
-    </main>
+    <div className={styles.gameContainer}>
+      {status === 'defeat' && <Smoke />}
+      {status === 'victory' && <Fireworks />}
+      <div className={styles.gameWrapper}>
+        {status === 'victory' && <Win />}
+        <AnimatedTitle key={gameId} status={status} />
+        <StatusBar
+          flagsLeft={flagsLeft}
+          time={time}
+          status={status}
+          onRestart={onRestart}
+          cols={cols}
+        />
+        <Field
+          rows={rows}
+          cols={cols}
+          getCellView={getCellView}
+          onCellClick={onCellClick}
+          onCellContextMenu={onCellContextMenu}
+        />
+        {status === 'defeat' && <GameOver />}
+      </div>
+    </div>
   );
 }

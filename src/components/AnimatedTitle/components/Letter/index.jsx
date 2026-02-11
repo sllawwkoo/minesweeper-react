@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { letterAnimation, letterExplode } from '../../../../utils/animation';
+import { letterAnimation, letterExplode } from '@/utils/animation';
 
 export default function Letter({ letter, index, status }) {
   const variants = useMemo(

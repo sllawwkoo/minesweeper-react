@@ -14,6 +14,7 @@ export function useMinesweeper(
   mineCount = DEFAULT_MINES
 ) {
   const [status, setStatus] = useState('idle');
+  const [gameId, setGameId] = useState(0);
   const [triggeredMineIndex, setTriggeredMineIndex] = useState(null);
   const field = useGameField(rows, cols, mineCount);
   const timer = useGameTimer();
@@ -86,6 +87,7 @@ export function useMinesweeper(
     timer.reset();
     field.reset();
     setStatus('idle');
+    setGameId((id) => id + 1);
     setTriggeredMineIndex(null);
   }, [timer, field]);
 
@@ -104,6 +106,7 @@ export function useMinesweeper(
     rows,
     cols,
     status,
+    gameId,
     time: timer.seconds,
     flagsLeft: field.flagsLeft,
     onCellClick,

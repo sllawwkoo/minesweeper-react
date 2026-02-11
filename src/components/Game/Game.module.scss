@@ -1,17 +1,27 @@
 $gamePadding: 1rem;
 $gameGap: 1rem;
 
-.game {
-  width: 100%;
+.gameContainer {
+  position: relative;
   min-height: 100vh;
   background-image: url('../../assets/image/bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: $gamePadding;
+  overflow: visible;
+}
+
+.gameWrapper {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: $gameGap;
-  padding: $gamePadding;
-
 }

@@ -1,0 +1,24 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image {
+  position: absolute;
+  height: 100vh;
+  width: 300vw;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+}
+
+.firstImg {
+  background-image: url('../../assets/image/fog-1.webp');
+}
+
+.secondImg {
+  background-image: url('../../assets/image/fog-2.webp');
+}
