@@ -3,17 +3,17 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 1.5rem;
+  margin-top: toRem(24);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  font-family: 'Nosifer', sans-serif;
+  gap: toRem(15);
+  font-family: var(--font-nosifer);
   font-weight: 700;
-  font-size: 48px;
+  font-size: toRem(48);
 
-  @media (max-width: 479px) {
-    font-size: 36px;
+  @media (max-width: 479.98px) {
+    font-size: toRem(36);
   }
 }

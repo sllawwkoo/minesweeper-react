@@ -1,17 +1,11 @@
-$cellSize: 2rem;
-$cellBorder: #888;
-$cellBorderWidth: 1px;
-
 .cell {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $cellSize;
-  height: $cellSize;
-  min-width: $cellSize;
-  min-height: $cellSize;
+  width: var(--cell-size);
+  height: var(--cell-size);
   padding: 0;
-  border: $cellBorderWidth solid $cellBorder;
+  border: var(--cell-border-width) solid var(--color-border-cell);
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;

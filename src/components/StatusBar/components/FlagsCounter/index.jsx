@@ -9,12 +9,8 @@ function formatThreeDigits(value) {
 export default function FlagsCounter({ value = 0 }) {
   const display = formatThreeDigits(value);
   return (
-    <div
-      className={styles.display}
-      role="status"
-      aria-label={`Прапорців залишилось: ${display}`}
-    >
-      {display}
+    <div className={styles.panel} role="status" aria-label={`Прапорців залишилось: ${display}`}>
+      <span className={styles.display}>{display}</span>
     </div>
   );
 }

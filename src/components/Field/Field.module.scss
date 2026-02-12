@@ -1,8 +1,6 @@
-$fieldGap: 0.125rem;
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--field-cols), auto);
-  gap: $fieldGap;
+  grid-template-columns: repeat(var(--cols, 9), auto);
+  gap: var(--cell-gap);
   justify-content: start;
 }

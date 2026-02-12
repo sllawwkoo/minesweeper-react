@@ -34,7 +34,7 @@ export default function Field({
   return (
     <div
       className={style.grid}
-      style={{ '--field-cols': cols }}
+      style={{ '--cols': cols }}
       role="grid"
       aria-label="Ігрове поле сапера"
     >

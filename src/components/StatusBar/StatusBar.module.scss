@@ -1,23 +1,15 @@
-$barBg: #c0c0c0;
-$barBorder: #808080 #fff #fff #808080;
-$barPadding: 0.25rem 0.5rem;
-$barGap: 0.5rem;
-$cellSize: 2rem;
-$cellGap: 0.125rem;
-
 .statusBar {
-  --cell-size: #{$cellSize};
-  --cell-gap: #{$cellGap};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: $barGap;
-  width: calc(var(--cols, 9) * var(--cell-size) + (var(--cols, 9) - 1) * var(--cell-gap));
-  padding: $barPadding;
-  background: $barBg;
-  border: 2px solid;
-  border-color: $barBorder;
-  box-shadow: inset 1px 1px 0 #dfdfdf;
+  gap: toRem(8);
+  width: 100%;
+  min-width: calc(var(--cols, 9) * var(--cell-size) + (var(--cols, 9) - 1) * var(--cell-gap));
+  padding: toRem(4) toRem(8);
+  background: var(--color-panel-bg);
+  border: toRem(2) solid;
+  border-color: var(--color-border-light) var(--color-border-dark) var(--color-border-dark) var(--color-border-light);
+  box-shadow: inset toRem(1) toRem(1) 0 var(--color-shadow-inset);
 
   > *:first-child {
     flex: 1 1 0;

@@ -29,7 +29,7 @@ export default function Game() {
     <div className={styles.gameContainer}>
       {status === 'defeat' && <Smoke />}
       {status === 'victory' && <Fireworks />}
-      <div className={styles.gameWrapper}>
+      <div className={styles.gameWrapper} style={{ '--cols': cols }}>
         {status === 'victory' && <Win />}
         <AnimatedTitle key={gameId} status={status} />
         <StatusBar
@@ -37,7 +37,6 @@ export default function Game() {
           time={time}
           status={status}
           onRestart={onRestart}
-          cols={cols}
         />
         <Field
           rows={rows}

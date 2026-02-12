@@ -3,16 +3,16 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 1.5rem;
+  margin-bottom: toRem(24);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  font-family: 'Alfa Slab One', sans-serif;
-  font-size: 48px;
+  gap: toRem(20);
+  font-family: var(--font-alfa-slab-one);
+  font-size: toRem(48);
 
-  @media (max-width: 479px) {
-    font-size: 36px;
+  @media (max-width: 479.98px) {
+    font-size: toRem(36);
   }
 }

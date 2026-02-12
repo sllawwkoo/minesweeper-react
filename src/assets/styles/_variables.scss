@@ -5,10 +5,36 @@
 	--font-alfa-slab-one: "Alfa Slab One", cursive, sans-serif;
 
 	// Трансформації
-
 	--tr-fast: 0.2s ease;
 	--tr-base: 0.3s ease;
 
-	// Кольори 
+	// Кольори панелі / статусбару
+	--color-panel-bg: #e0e0e0;
+	--color-border-light: #ffffff;
+	--color-border-dark: #808080;
+	--color-border-cell: #888888;
+	--color-shadow: rgba(0, 0, 0, 0.2);
+	--color-shadow-inset: #dfdfdf;
+	--color-shadow-inset-active: #808080;
 
+	// Кольори дисплею (таймер, лічильник прапорців)
+	--color-display-panel-bg: #c0c0c0;
+	--color-display-bg: #000000;
+	--color-display-text: #ffff22;
+	--color-display-border: #333333;
+	--color-display-shadow: inset #{toRem(1)} #{toRem(1)} #{toRem(2)} rgba(0, 0, 0, 0.5);
+	--color-display-inset-shadow: inset #{toRem(2)} #{toRem(2)} #{toRem(5)} rgba(154, 147, 140, 0.5);
+	--color-display-outer-highlight: #{toRem(1)} #{toRem(1)} #{toRem(5)} rgb(255 255 255);
+
+	// Кольори фокусу
+	--color-focus-outline: #000000;
+
+	// Фон body
+	--turquoise-20: #e0f2f1;
+
+	// Розміри
+	--statusbar-height: #{toRem(70)};
+	--game-max-width: #{toRem(480)};
+	--cell-gap: #{toRem(2)};
+	--cell-border-width: #{toRem(1)};
 }

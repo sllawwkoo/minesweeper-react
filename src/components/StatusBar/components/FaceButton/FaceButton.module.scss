@@ -2,32 +2,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  background: #c0c0c0;
-  border: 2px solid;
-  border-color: #fff #808080 #808080 #fff;
-  border-radius: 0;
+  width: toRem(55);
+  height: toRem(55);
+  // padding: toRem(1) toRem(6);
+  background: var(--color-panel-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  box-shadow:
+    inset rgb(0 0 0 / 50%) -3px -3px 8px,
+    inset rgb(255 255 255 / 90%) 3px 3px 8px,
+    rgb(0 0 0 / 80%) 3px 3px 8px -3px;
+  margin: toRem(16) auto;
+  border: toRem(2) solid #bdbdbd;
+  border-radius: toRem(10);
+  transition: border-color var(--tr-base), box-shadow var(--tr-base), transform var(--tr-base);
+  will-change: border-color, box-shadow, transform;
   cursor: pointer;
-  box-shadow: inset 1px 1px 0 #dfdfdf;
+  // box-shadow: inset toRem(1) toRem(1) 0 var(--color-shadow-inset);
 
   &:active {
-    border-color: #808080 #fff #fff #808080;
-    box-shadow: inset 1px 1px 0 #808080;
+    border-color: var(--color-border-dark) var(--color-border-light) var(--color-border-light) var(--color-border-dark);
+    box-shadow: inset toRem(1) toRem(1) 0 var(--color-shadow-inset-active);
   }
 
   &:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 2px;
+    outline: toRem(2) solid var(--color-focus-outline);
+    outline-offset: toRem(2);
   }
 }
 
-.face {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
-  pointer-events: none;
+.start {
+  background-image: url('@/assets/image/emojis/start.png');
 }
 
+.gameover {
+  background-image: url('@/assets/image/emojis/gameover.png');
+}
+
+.win {
+  background-image: url('@/assets/image/emojis/win.png');
+}
