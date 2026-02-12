@@ -3,4 +3,12 @@
   grid-template-columns: repeat(var(--cols, 9), auto);
   gap: var(--cell-gap);
   justify-content: start;
+  padding: toRem(3);
+  border-top: toRem(3) solid var(--color-border-dark);
+  border-left: toRem(3) solid var(--color-border-dark);
+  border-bottom: toRem(3) solid var(--color-border-light);
+  border-right: toRem(3) solid var(--color-border-light);
+  box-shadow:
+    inset toRem(3) toRem(3) toRem(0) var(--color-shadow-inset),
+    inset toRem(-3) toRem(-3) toRem(0) var(--color-shadow-inset-active);
 }

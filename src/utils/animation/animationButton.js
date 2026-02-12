@@ -2,6 +2,7 @@ export const buttonAnimation = {
   initial: {
     x: 0,
     scale: 1,
+    rotate: 0,
   },
   victory: {
     x: [0, -10, 10, -10, 10, 0],

@@ -32,19 +32,21 @@ export default function Game() {
       <div className={styles.gameWrapper} style={{ '--cols': cols }}>
         {status === 'victory' && <Win />}
         <AnimatedTitle key={gameId} status={status} />
-        <StatusBar
-          flagsLeft={flagsLeft}
-          time={time}
-          status={status}
-          onRestart={onRestart}
-        />
-        <Field
-          rows={rows}
-          cols={cols}
-          getCellView={getCellView}
-          onCellClick={onCellClick}
-          onCellContextMenu={onCellContextMenu}
-        />
+        <div className={styles.panel}>
+          <StatusBar
+            flagsLeft={flagsLeft}
+            time={time}
+            status={status}
+            onRestart={onRestart}
+          />
+          <Field
+            rows={rows}
+            cols={cols}
+            getCellView={getCellView}
+            onCellClick={onCellClick}
+            onCellContextMenu={onCellContextMenu}
+          />
+        </div>
         {status === 'defeat' && <GameOver />}
       </div>
     </div>

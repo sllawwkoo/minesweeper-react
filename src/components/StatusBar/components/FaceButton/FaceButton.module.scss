@@ -19,7 +19,26 @@
   transition: border-color var(--tr-base), box-shadow var(--tr-base), transform var(--tr-base);
   will-change: border-color, box-shadow, transform;
   cursor: pointer;
-  // box-shadow: inset toRem(1) toRem(1) 0 var(--color-shadow-inset);
+
+  @media (max-width: 1659.98px) {
+    width: toRem(52);
+  height: toRem(52);
+  }
+
+  @media (max-width: 1199.98px) {
+    width: toRem(48);
+    height: toRem(48);
+  }
+
+  @media (max-width: 767.98px) {
+    width: toRem(44);
+    height: toRem(44);
+  }
+
+  @media (max-width: 479.98px) {
+    width: toRem(42);
+    height: toRem(42);
+  }
 
   &:active {
     border-color: var(--color-border-dark) var(--color-border-light) var(--color-border-light) var(--color-border-dark);

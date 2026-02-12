@@ -15,15 +15,25 @@
   padding: toRem(4) toRem(8);
   background: var(--color-display-bg);
   color: var(--color-display-text);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: toRem(24);
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: toRem(40);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: toRem(0.8);
+  letter-spacing: toRem(0.5);
+  font-variant-numeric: tabular-nums;
   box-shadow: inset var(--color-display-inset-shadow);
   border: toRem(1) solid var(--color-display-border);
 
+  @media (max-width: 1659.98px) {
+    font-size: toRem(36);
+  }
+  @media (max-width: 1199.98px) {
+    font-size: toRem(34);
+  }
+  @media (max-width: 767.98px) {
+    font-size: toRem(32);
+  }
   @media (max-width: 479.98px) {
-    font-size: toRem(20);
+    font-size: toRem(30);
   }
 }
