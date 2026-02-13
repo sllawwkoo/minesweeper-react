@@ -62,6 +62,7 @@ function Cell({
 }) {
   const longPressTimer = useRef(null);
   const longPressTriggered = useRef(false);
+  const suppressClick = useRef(false);
 
   const stateClass = getCellStateClass({
     isOpen,
@@ -86,6 +87,8 @@ function Cell({
 
     longPressTimer.current = setTimeout(() => {
       longPressTriggered.current = true;
+      suppressClick.current = true;
+
       onContextMenu?.({ preventDefault: () => {} });
     }, 400);
   };
@@ -101,10 +104,18 @@ function Cell({
     }
   };
 
+  const handleClick = (e) => {
+    if (suppressClick.current) {
+      suppressClick.current = false;
+      return; // блокуємо паразитний click після long press
+    }
+    onClick();
+  };
+
   return (
     <div
       className={classNames}
-      onClick={onClick}
+      onClick={handleClick}
       onContextMenu={onContextMenu}
       onKeyDown={handleKeyDown}
       onTouchStart={handleTouchStart}
