@@ -23,7 +23,7 @@ const BACKGROUND_CLASS = {
   defeat: 'gameover',
 };
 
-export default function FaceButton({ status = 'idle', onRestart }) {
+function FaceButton({ status = 'idle', onRestart }) {
   const variant = VARIANT[status];
   const backgroundClass = BACKGROUND_CLASS[status];
 
@@ -40,3 +40,5 @@ export default function FaceButton({ status = 'idle', onRestart }) {
     />
   );
 }
+
+export default FaceButton;

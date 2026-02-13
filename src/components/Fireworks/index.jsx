@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
-import Launch from '../Launch';
+import Launch from './components/Launch';
 import { getRandomColor } from '@/utils/helpers';
 import styles from './Fireworks.module.scss';
 
 const STAR_COUNT = 100;
 
-export default function Fireworks() {
+function Fireworks() {
   const stars = useMemo(
     () =>
       [...Array(STAR_COUNT)].map((_, index) => ({
@@ -32,3 +32,5 @@ export default function Fireworks() {
     </div>
   );
 }
+
+export default Fireworks;

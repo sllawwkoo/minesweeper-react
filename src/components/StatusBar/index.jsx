@@ -3,7 +3,7 @@ import FlagsCounter from './components/FlagsCounter';
 import FaceButton from './components/FaceButton';
 import GameTimer from './components/GameTimer';
 
-export default function StatusBar({ flagsLeft, time, status, onRestart }) {
+function StatusBar({ flagsLeft, time, status, onRestart }) {
   return (
     <div className={styles.statusBar}>
       <FlagsCounter value={flagsLeft} />
@@ -12,3 +12,5 @@ export default function StatusBar({ flagsLeft, time, status, onRestart }) {
     </div>
   );
 }
+
+export default StatusBar;

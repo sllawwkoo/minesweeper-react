@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { firstImgAnimation, secondImgAnimation } from '@/utils/animation';
 import styles from './Smoke.module.scss';
 
-export default function Smoke() {
+function Smoke() {
   return (
     <div className={styles.container}>
       <motion.div
@@ -20,3 +20,5 @@ export default function Smoke() {
     </div>
   );
 }
+
+export default Smoke;

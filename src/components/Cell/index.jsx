@@ -1,9 +1,10 @@
+import { getCellStateClass } from '@/utils/helpers';
 import style from './Cell.module.scss';
 
 /**
  * Одна клітинка сапера. Презентаційний компонент — без логіки гри.
  */
-export default function Cell({
+function Cell({
   isOpen,
   isFlagged,
   isMine,
@@ -12,19 +13,13 @@ export default function Cell({
   onClick,
   onContextMenu,
 }) {
-  let stateClass = 'closed';
-
-  if (!isOpen && isFlagged) {
-    stateClass = 'flaged';
-  } else if (isOpen && isMine) {
-    stateClass = isTriggeredMine ? 'bombed' : 'bomb';
-  } else if (isOpen && !isMine) {
-    if (minesAround === 0) {
-      stateClass = 'zero';
-    } else if (minesAround > 0) {
-      stateClass = `num${minesAround}`;
-    }
-  }
+  const stateClass = getCellStateClass({
+    isOpen,
+    isFlagged,
+    isMine,
+    isTriggeredMine,
+    minesAround,
+  });
 
   const classNames = `${style.cell} ${style[stateClass]}`;
 
@@ -48,3 +43,5 @@ export default function Cell({
     />
   );
 }
+
+export default Cell;

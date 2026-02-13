@@ -3,7 +3,7 @@ import styles from './AnimatedTitle.module.scss';
 
 const TITLE = 'MINESWEEPER';
 
-export default function AnimatedTitle({ status = 'defeat' }) {
+function AnimatedTitle({ status = 'defeat' }) {
   const letters = TITLE.split('');
 
   return (
@@ -14,3 +14,5 @@ export default function AnimatedTitle({ status = 'defeat' }) {
     </div>
   );
 }
+
+export default AnimatedTitle;

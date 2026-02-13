@@ -4,7 +4,7 @@ import style from './Field.module.scss';
 /**
  * Контейнер ігрового поля. Рендерить сітку клітинок, не містить логіки гри.
  */
-export default function Field({
+function Field({
   rows,
   cols,
   getCellView,
@@ -42,3 +42,5 @@ export default function Field({
     </div>
   );
 }
+
+export default Field;

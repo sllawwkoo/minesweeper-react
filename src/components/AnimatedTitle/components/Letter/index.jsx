@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { letterAnimation, letterExplode } from '@/utils/animation';
 
-export default function Letter({ letter, index, status }) {
+function Letter({ letter, index, status }) {
   const variants = useMemo(
     () => ({
       ...letterAnimation(index),
@@ -19,3 +19,5 @@ export default function Letter({ letter, index, status }) {
     </motion.span>
   );
 }
+
+export default Letter;

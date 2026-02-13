@@ -11,7 +11,7 @@ import styles from './Game.module.scss';
 /**
  * Головний UI-контейнер гри. Використовує useMinesweeper і відображає StatusBar + Field.
  */
-export default function Game() {
+function Game() {
   const {
     rows,
     cols,
@@ -52,3 +52,5 @@ export default function Game() {
     </div>
   );
 }
+
+export default Game;

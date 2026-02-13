@@ -1,12 +1,7 @@
+import { formatThreeDigits } from '@/utils/helpers';
 import styles from './GameTimer.module.scss';
 
-function formatThreeDigits(value) {
-  if (value < 0) return '000';
-  const n = Math.min(999, Math.floor(value));
-  return String(n).padStart(3, '0');
-}
-
-export default function GameTimer({ value = 0 }) {
+function GameTimer({ value = 0 }) {
   const display = formatThreeDigits(value);
   return (
     <div className={styles.panel} role="status" aria-label="Час гри">
@@ -14,3 +9,5 @@ export default function GameTimer({ value = 0 }) {
     </div>
   );
 }
+
+export default GameTimer;

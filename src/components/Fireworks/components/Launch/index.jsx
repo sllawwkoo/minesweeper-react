@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './Launch.module.scss';
 
-export default function Launch({ left, bottom, background, randomAnimate }) {
+function Launch({ left, bottom, background, randomAnimate }) {
   return (
     <motion.div
       className={styles.container}
@@ -34,3 +34,5 @@ export default function Launch({ left, bottom, background, randomAnimate }) {
     </motion.div>
   );
 }
+
+export default Launch;

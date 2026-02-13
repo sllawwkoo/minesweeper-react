@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { youWinAnimation, youMoveAnimation, winMoveAnimation } from '@/utils/animation';
 import styles from './Win.module.scss';
 
-export default function Win() {
+function Win() {
   return (
     <motion.div
       className={styles.container}
@@ -19,3 +19,5 @@ export default function Win() {
     </motion.div>
   );
 }
+
+export default Win;

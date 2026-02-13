@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { gameOverAnimation, gameMoveAnimation, overMoveAnimation } from '@/utils/animation';
 import styles from './GameOver.module.scss';
 
-export default function GameOver() {
+function GameOver() {
   return (
     <motion.div
       className={styles.container}
@@ -19,3 +19,5 @@ export default function GameOver() {
     </motion.div>
   );
 }
+
+export default GameOver;
